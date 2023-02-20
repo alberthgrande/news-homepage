@@ -1,0 +1,137 @@
+:root {
+  --primary-Soft-orange: hsl(35, 77%, 62%);
+  --primary-Soft-red: hsl(5, 85%, 63%);
+
+  --neutral-Off-white: hsl(36, 100%, 99%);
+  --neutral-Grayish-blue: hsl(233, 8%, 79%);
+  --neutral-Dark-grayish-blue: hsl(236, 13%, 42%);
+  --neutral-Very-dark-blue: hsl(240, 100%, 5%);
+
+  --fs-body: 1rem;
+
+  --font-family: "Inter", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-800: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+html {
+  font-family: var(--font-family);
+  font-size: var(--fs-body);
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.container {
+  width: 90vw;
+  max-width: 1110px;
+  margin: 50px auto;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 38px;
+}
+
+/* main */
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 70px;
+}
+
+/* first article */
+.first-article {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 28px;
+  align-items: center;
+}
+.main-figure {
+  grid-column: 1 / 3;
+}
+.main-figure img {
+  width: 100%;
+}
+.main-note-h1 {
+  grid-column: 1 / 2;
+  font-size: 56px;
+  font-weight: var(--fw-800);
+  line-height: 1;
+}
+.main-note-content {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.note-advance {
+  color: var(--neutral-Dark-grayish-blue);
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+.btn-more {
+  transition: 0.3s all;
+}
+.btn-more:link,
+.btn-more:visited {
+  background: var(--primary-Soft-red);
+  width: fit-content;
+  display: inline-block;
+  color: var(--neutral-Off-white);
+  font-weight: var(--fw-700);
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 16px 34px;
+}
+.btn-more:hover {
+  background: var(--neutral-Very-dark-blue);
+}
+.btn-more:active {
+  transform: scale(0.98);
+}
+
+/* aside */
+.aside {
+  grid-column: 3 / 4;
+
+  grid-row: 1 / 2;
+}
+
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
